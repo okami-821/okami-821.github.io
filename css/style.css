@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'Yusei Magic';
+  src: url(../css/YuseiMagic-Regular.ttf);
+}
+body {background-color: #3f5f50ff;}
+.index-container .mainImg {
+  height: 100vh;
+}
+.index-container .mainImg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("../images/mainImage.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.index-container section {
+  margin: 0 0 30px;
+}
+.index-container section > h2 {
+  font-size: 1.375rem;
+  font-family: 'Yusei Magic';
+}
+.index-container section > p {
+  font-family: 'Yusei Magic';
+}
+.index-container .container {
+  padding: 1rem 2rem;
+  margin: auto;
+  background-color: white;
+}
+.index-container .container > p {
+  padding: 3rem .5rem;
+}
+.index-container .sub dl {
+  margin: 30px 0;
+}
+.title {
+  position: relative;
+  padding: 5vh 5vw;
+  top: 150px;
+  left: 0;
+  opacity: 0.8;
+}
+.title h1 {
+  font-size: 2em;
+  color: tomato;
+  font-weight: bolder;
+}
+.title p {
+  color: tomato;
+}
+.delighter.splash {
+  transition: all 2s ease-out;
+}
+.delighter.splash.ended {
+  background: white;
+}
+.delighter.right {
+  transform: translate(-100%);
+  opacity: 0;
+  transition: all .90s ease-out;
+}
+.delighter.right.started {
+  transform: none;
+  opacity: 1;
+}
+@media (min-width: 600px) {
+  .mainImg {
+    background: url("../images/mainImage.jpg") no-repeat fixed center center /cover;
+  }
+  .index-container .container {
+    max-width: 1000px;
+  }
+  .index-container .wide {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .index-container .wide section {
+    max-width: 40%;
+  }
+  .index-container .opacity {
+    cursor: pointer;
+    transition: all .5s ease-out;
+  }
+  .index-container .opacity:hover {
+    opacity: .6;
+  }
+  .index-container .sub {
+    max-width: 500px;
+    margin: auto;
+  }
+}

@@ -1,0 +1,167 @@
+@font-face {
+  font-family: 'Rampart One';
+  src: url(../css/RampartOne-Regular.ttf);
+}
+
+.bg-layout1 h1{
+  font-family: 'Rampart One', cursive;
+  font-size: 1.625rem;
+}
+.bg-layout1 {
+  padding: 80px 30px 50px;
+}
+.bg-layout2,
+.bg-layout3,
+.bg-layout4 {
+  padding: 50px 30px;
+}
+.bg-layout1 {
+  background: palegoldenrod;
+}
+.bg-layout2 {
+  position: relative;
+  z-index: 0;
+}
+.bg-layout2 h2 {
+  font-size: 1.375rem;
+  text-align: center;
+  margin: 30px 0;
+}
+.bg-layout2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: skewY(-5deg);
+  transform-origin: bottom left;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+}
+.bg-layout3 {
+  position: relative;
+  z-index: 0;
+}
+.bg-layout3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: skewY(5deg);
+  transform-origin: top left;
+  background: rosybrown;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.lo-common h2 {
+  margin: 30px 0;
+  font-size: 1.375rem;
+}
+.lo-common .box > p {
+  margin: 20px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+  font-size: 14px;
+}
+.list {
+  margin-bottom: 30px;
+}
+.list dt,
+.list dd {
+  background: honeydew;
+  border: 5px solid darkseagreen;
+}
+.list dt {
+  width: 150px;
+  text-align: center;
+  padding: 8px 0;
+  color: #333;
+
+  border-bottom: 0;
+}
+.list dd {
+  min-height: 150px;
+  padding: 12px;
+}
+
+
+
+
+@media (min-width: 600px) {
+  .bg-layout1 h1 {
+    font-size: 2.5rem;
+    margin: 50px 0;
+  }
+  .bg-layout2 .box,
+  .lo-common .box {
+    max-width: 1000px;
+    margin: auto;
+  }
+  .bg-layout2 p {
+    width: 90%;
+    margin: auto;
+  }
+  .lo-common .box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .lo-common h2 {
+    margin: 50px 0;
+    font-size: 1.5rem;
+  }
+  .lo-common .box > p {
+    /* width: 350px; */
+    width: 38%;
+    align-self: center;
+  }
+  .lo-common .box picture {
+    /* width: 600px; */
+    width: 60%;
+  }
+
+
+  .container {
+    margin: 100px auto;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu li {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  .menu li a {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    padding: 8px 0;
+    color: #333;
+    background: #9bcc9b;
+    border: 5px solid darkseagreen;
+    border-bottom: 0;
+  }
+  .menu li a.active {
+    background: honeydew;
+    border: 5px solid mediumseagreen;
+    border-bottom: 0;
+  }
+  .menu li a:not(.active):hover {
+    opacity: 0.5;
+    transition: opacity 0.4s;
+  }
+  .content.active {
+    min-height: 150px;
+    padding: 12px;
+    display: block;
+    background: honeydew;
+    border: 5px solid mediumseagreen;
+  }
+  .content {
+    display: none;
+  }
+}
