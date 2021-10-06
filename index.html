@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <title>list-page</title>
-  </head>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>list-page</title>
+<style>
+*{color:#333}
+img {max-width: 100%;}
+ul{padding: 0;margin-top: 50px;}
+li {list-style: none;}
+a {text-decoration: none;display: inline-block;width:100%}
+.box {
+  width: 90%;
+  margin: 100px auto;
+  border: 1px solid;
+  text-align: center;
+}
+.pic {
+  width: 100px;
+  margin: 50px auto 0;
+}
+li {
+  padding: 10px;
+  list-style: none;
+  border: 1px solid;
+  width: 90%;
+  margin: 0 auto 10px;
+}
+@media (min-width: 600px) {
+  .box {
+    width: 600px;
+  }
+  li:hover {
+    background-color: darksalmon;
+  }
+}
+</style>
+</head>
   <body>
-    <p>list page<br>
-    ポートフォリオです</p>
+
+    <div class="box">
+      <div class="pic"><img src="img.png"></div>
+      <h1>Portfolio</h1>
+      <ul>
+        <li><a href="https://okami-821.github.io/01_work/">01_work</a></li>
+        <li><a href="https://okami-821.github.io/02_work/">02_work</a></li>
+        <li><a href="https://okami-821.github.io/03_work/">03_work</a></li>
+      </ul>
+    </div>
+    
+    
+    
   </body>
 </html>
