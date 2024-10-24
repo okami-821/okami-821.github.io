@@ -1,57 +1,147 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>list-page</title>
-<style>
-*{color:#333}
-img {max-width: 100%;}
-ul{padding: 0;margin-top: 50px;}
-li {list-style: none;}
-a {text-decoration: none;display: inline-block;width:100%}
-.box {
-  width: 90%;
-  margin: 100px auto;
-  border: 1px solid;
-  text-align: center;
-}
-.pic {
-  width: 100px;
-  margin: 50px auto 0;
-}
-li {
-  padding: 10px;
-  list-style: none;
-  border: 1px solid;
-  width: 90%;
-  margin: 0 auto 10px;
-}
-@media (min-width: 600px) {
-  .box {
-    width: 600px;
-  }
-  li:hover {
-    background-color: darksalmon;
-  }
-}
-</style>
-</head>
-  <body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTFORIO</title>
+  <meta name="monetization" content="$ilp.uphold.com/2f28xFUMdj9Z" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+  <style>
+    .zen-kurenaido-regular {
+      font-family: "Zen Kurenaido", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-    <div class="box">
-      <div class="pic"><img src="img.png"></div>
-      <h1>Portfolio</h1>
-      <ul>
-        <li><a href="https://okami-821.github.io/01_work/">01_work</a></li>
-        <li><a href="https://okami-821.github.io/02_work/">02_work</a></li>
-        <li><a href="https://okami-821.github.io/03_work/">03_work</a></li>
-        <li><a href="https://www.tabinekokagu.com/">04_work</a></li>
-      </ul>
-    </div>
-    
-    
-    
-  </body>
+    body {
+      background-color: aliceblue;
+      overflow: clip;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background:
+        radial-gradient(70% 1% at 30% 5%, rgba(204, 102, 51, 0.1333333333) 80%, rgba(0, 0, 0, 0) 0) 50% 50%/100% 10%,
+        radial-gradient(60% 1.3% at 30% 5%, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 30% 50%/70% 7.5%,
+        radial-gradient(50% 0.7% at 30% 5%, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 30% 50%/50% 17.5%,
+        radial-gradient(60% 1% at 30% 5%, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 0% 10%/60% 9%,
+        radial-gradient(80% 1.3% at 30% 5%, rgba(121, 43, 5, 0.067) 80%, rgba(0, 0, 0, 0) 0) 70% 20%/66% 7.5%,
+        radial-gradient(100% 1.1% at 30% 5%, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 0% 17%/70% 12.5%,
+        radial-gradient(60% 3% at 50% 0, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 0% 10%/70% 7.5% repeat-y,
+        radial-gradient(40% 4% at 70% 5%, rgba(187, 85, 34, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 100% 2%/70% 5%,
+        radial-gradient(80% 50% at 20% 20%, rgba(192, 130, 67, 0.2039215686) 10%, rgba(0, 0, 0, 0) 25%),
+        radial-gradient(140% 50% at 90% 45%, rgba(192, 130, 67, 0.1411764706) 10%, rgba(0, 0, 0, 0) 15%),
+        radial-gradient(100% 50% at 70% 50%, rgba(192, 130, 67, 0.1411764706) 10%, rgba(0, 0, 0, 0) 15%),
+        linear-gradient(to top right, rgba(0, 0, 0, 0.0666666667), rgba(255, 255, 204, 0.3333333333)), #652702;
+      }
+      article {
+        font-size: 2em;
+        background: white;
+        padding: 2em 2em 2em 3em;
+        width: 85vmin;
+        height: 110vmin;
+        background: 
+          radial-gradient(circle at 0.4em 50%, #000 0.125em, rgba(0, 0, 0, 0) 0.135em) 0 0/100% 3vmin repeat-y,
+          linear-gradient(90deg, rgba(0, 0, 0, 0) 2.35em, #fdd 0 2.4em, rgba(0, 0, 0, 0) 0),
+          linear-gradient(-90deg, rgba(0, 0, 0, 0) 22.35em, #fdd 0 22.4em, rgba(0, 0, 0, 0) 0),
+          repeating-linear-gradient(rgba(0, 0, 0, 0) 0 5%, #99F 0 5.1%) 100% 80%/calc(100% - 2.35em) 82% no-repeat, #EEE;
+          /* radial-gradientとは円形のグラデーションを作る */
+          /* linear-gradient線形グラデーションを作る */
+          /* repeating-linear-gradient繰り返しの線形グラデーションを作る */
+        border-radius: 0.05em;
+        box-shadow: 0.1em 0.1em #ddd, 0.065em 0.05em #fff, 0.15em 0.15em #bbb, 0.125em 0 0 0.15em #333, 0.25em 0.125em 0 0.15em #000;
+        transform: rotate(3deg) translate(5%, 5%);
+        transform-origin: 10% 10%;
+        position: relative;
+        filter: drop-shadow(-0.25vmin 0.1em 0.35vmin rgba(0, 0, 0, 0.1333333333)) drop-shadow(1vmin 0 1vmin rgba(0, 0, 0, 0.2));
+      }
+      article::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -1em;
+        width: 1.5em;
+        height: 100%;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0) 0.225em, #999 0 0.375em, rgba(0, 0, 0, 0) 0) 80% 0/68% 3vmin repeat-y,
+          linear-gradient(25deg, rgba(0, 0, 0, 0) 0.225em, #666 0 0.35em, rgba(0, 0, 0, 0) 0) 44% 0.1%/40% 3vmin repeat-y,
+          radial-gradient(circle at 0.4em 50%, #999 0.075em, rgba(0, 0, 0, 0) 0.085em) 0 0/100% 3vmin repeat-y,
+          radial-gradient(circle at 1.4em 50%, #999 0.075em, rgba(0, 0, 0, 0) 0.085em) 0 0/100% 3vmin repeat-y, rgba(255, 0, 0, 0);
+        }
+        article::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -1em;
+          width: 1.5em;
+          height: 100%;
+          background: linear-gradient(rgba(0, 0, 0, 0) 0.225em, rgba(255, 255, 255, 0.4666666667) 0 0.375em, rgba(0, 0, 0, 0) 0) 80% 0/68% 3vmin repeat-y;
+          mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0.4em, #000 0.6em, rgba(0, 0, 0, 0) 1.2em), linear-gradient(rgba(0, 0, 0, 0) 0.225em, rgba(255, 255, 255, 0.4666666667) 0.28em 0.3em, rgba(0, 0, 0, 0) 0.375em) 80% 0/68% 3vmin repeat-y;
+          mask-composite: intersect;
+        }
+        h2 {
+          white-space: pre;
+          position: relative;
+          display: inline-block;
+          font-size: clamp(1.125rem, 0.443rem + 3.41vw, 3rem);
+        }
+        h2::before {
+          content: "";
+          position: absolute;
+          top: 25%;
+          width: 100%;
+          height: 100%;
+          /* background-color: rgba(255, 0, 0, 0.2); */
+          background-image: radial-gradient(300% 60% at 50% 100%, rgba(0, 0, 0, 0) 50%, #000 51% 55%, rgba(0, 0, 0, 0) 56%);
+          transform: rotate(0deg);
+        }
+        ol {
+          line-height: 1.6;
+          margin-top: 3px;
+        }
+        /* .marker {
+          display: inline-block;
+        }
+        .marker:hover {
+          background-image: linear-gradient(transparent 50%,rgb(255 222 33 / 0.7));
+          transition: 0.3s;
+        } */
+        a {
+          text-decoration: none;
+          color: #333;
+          display: inline-block;
+          position: relative;
+        }
+        a::after {
+          position: absolute;
+          left: 0;
+          content: '';
+          width: 100%;
+          height: 10px;
+          background-color: gold;
+          bottom: -2px;
+          transform: scale(0, 1);
+          transform-origin: left top;
+          transition: transform 0.3s;
+        }
+        a:hover::after {
+          transform: scale(1, 1);
+        }
+  </style>
+</head>
+<body>
+  <article>
+    <h2 class="zen-kurenaido-regular">岡見美和 ポートフォリオ</h2>
+    <ol class="zen-kurenaido-regular">
+      <li><a class="marker" href="#">Portfori 01</a></li>
+      <!-- <li>Portfori 02</li>
+      <li>Portfori 03</li>
+      <li>Portfori 04</li>
+      <li>Portfori 05</li> -->
+    </ol>
+  </article>
+</body>
 </html>
