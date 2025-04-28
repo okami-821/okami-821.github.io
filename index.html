@@ -3,149 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PORTFORIO INDEX</title>
-  <meta name="monetization" content="$ilp.uphold.com/2f28xFUMdj9Z" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Portforio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
-  <style>
-    .zen-kurenaido-regular {
-      font-family: "Zen Kurenaido", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    body {
-      background-color: aliceblue;
-      overflow: clip;
-      min-height: 100vh;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      background:
-        radial-gradient(70% 1% at 30% 5%, rgba(204, 102, 51, 0.1333333333) 80%, rgba(0, 0, 0, 0) 0) 50% 50%/100% 10%,
-        radial-gradient(60% 1.3% at 30% 5%, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 30% 50%/70% 7.5%,
-        radial-gradient(50% 0.7% at 30% 5%, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 30% 50%/50% 17.5%,
-        radial-gradient(60% 1% at 30% 5%, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 0% 10%/60% 9%,
-        radial-gradient(80% 1.3% at 30% 5%, rgba(121, 43, 5, 0.067) 80%, rgba(0, 0, 0, 0) 0) 70% 20%/66% 7.5%,
-        radial-gradient(100% 1.1% at 30% 5%, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 0% 17%/70% 12.5%,
-        radial-gradient(60% 3% at 50% 0, rgba(204, 102, 51, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 0% 10%/70% 7.5% repeat-y,
-        radial-gradient(40% 4% at 70% 5%, rgba(187, 85, 34, 0.0666666667) 80%, rgba(0, 0, 0, 0) 0) 100% 2%/70% 5%,
-        radial-gradient(80% 50% at 20% 20%, rgba(192, 130, 67, 0.2039215686) 10%, rgba(0, 0, 0, 0) 25%),
-        radial-gradient(140% 50% at 90% 45%, rgba(192, 130, 67, 0.1411764706) 10%, rgba(0, 0, 0, 0) 15%),
-        radial-gradient(100% 50% at 70% 50%, rgba(192, 130, 67, 0.1411764706) 10%, rgba(0, 0, 0, 0) 15%),
-        linear-gradient(to top right, rgba(0, 0, 0, 0.0666666667), rgba(255, 255, 204, 0.3333333333)), #652702;
-      }
-      article {
-        font-size: 2em;
-        background: white;
-        padding: 2em 2em 2em 3em;
-        width: 85vmin;
-        height: 110vmin;
-        background: 
-          radial-gradient(circle at 0.4em 50%, #000 0.125em, rgba(0, 0, 0, 0) 0.135em) 0 0/100% 3vmin repeat-y,
-          linear-gradient(90deg, rgba(0, 0, 0, 0) 2.35em, #fdd 0 2.4em, rgba(0, 0, 0, 0) 0),
-          linear-gradient(-90deg, rgba(0, 0, 0, 0) 22.35em, #fdd 0 22.4em, rgba(0, 0, 0, 0) 0),
-          repeating-linear-gradient(rgba(0, 0, 0, 0) 0 5%, #99F 0 5.1%) 100% 80%/calc(100% - 2.35em) 82% no-repeat, #EEE;
-          /* radial-gradientとは円形のグラデーションを作る */
-          /* linear-gradient線形グラデーションを作る */
-          /* repeating-linear-gradient繰り返しの線形グラデーションを作る */
-        border-radius: 0.05em;
-        box-shadow: 0.1em 0.1em #ddd, 0.065em 0.05em #fff, 0.15em 0.15em #bbb, 0.125em 0 0 0.15em #333, 0.25em 0.125em 0 0.15em #000;
-        transform: rotate(3deg) translate(5%, 5%);
-        transform-origin: 10% 10%;
-        position: relative;
-        filter: drop-shadow(-0.25vmin 0.1em 0.35vmin rgba(0, 0, 0, 0.1333333333)) drop-shadow(1vmin 0 1vmin rgba(0, 0, 0, 0.2));
-      }
-      article::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -1em;
-        width: 1.5em;
-        height: 100%;
-        background:
-          linear-gradient(rgba(0, 0, 0, 0) 0.225em, #999 0 0.375em, rgba(0, 0, 0, 0) 0) 80% 0/68% 3vmin repeat-y,
-          linear-gradient(25deg, rgba(0, 0, 0, 0) 0.225em, #666 0 0.35em, rgba(0, 0, 0, 0) 0) 44% 0.1%/40% 3vmin repeat-y,
-          radial-gradient(circle at 0.4em 50%, #999 0.075em, rgba(0, 0, 0, 0) 0.085em) 0 0/100% 3vmin repeat-y,
-          radial-gradient(circle at 1.4em 50%, #999 0.075em, rgba(0, 0, 0, 0) 0.085em) 0 0/100% 3vmin repeat-y, rgba(255, 0, 0, 0);
-        }
-        article::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -1em;
-          width: 1.5em;
-          height: 100%;
-          background: linear-gradient(rgba(0, 0, 0, 0) 0.225em, rgba(255, 255, 255, 0.4666666667) 0 0.375em, rgba(0, 0, 0, 0) 0) 80% 0/68% 3vmin repeat-y;
-          mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0.4em, #000 0.6em, rgba(0, 0, 0, 0) 1.2em), linear-gradient(rgba(0, 0, 0, 0) 0.225em, rgba(255, 255, 255, 0.4666666667) 0.28em 0.3em, rgba(0, 0, 0, 0) 0.375em) 80% 0/68% 3vmin repeat-y;
-          mask-composite: intersect;
-        }
-        h2 {
-          white-space: pre;
-          position: relative;
-          display: inline-block;
-          font-size: clamp(1.125rem, 0.443rem + 3.41vw, 3rem);
-        }
-        h2::before {
-          content: "";
-          position: absolute;
-          top: 25%;
-          width: 100%;
-          height: 100%;
-          /* background-color: rgba(255, 0, 0, 0.2); */
-          background-image: radial-gradient(300% 60% at 50% 100%, rgba(0, 0, 0, 0) 50%, #000 51% 55%, rgba(0, 0, 0, 0) 56%);
-          transform: rotate(0deg);
-        }
-        ol {
-          line-height: 1.6;
-          margin-top: 3px;
-        }
-        /* .marker {
-          display: inline-block;
-        }
-        .marker:hover {
-          background-image: linear-gradient(transparent 50%,rgb(255 222 33 / 0.7));
-          transition: 0.3s;
-        } */
-        a {
-          text-decoration: none;
-          color: #333;
-          display: inline-block;
-          position: relative;
-        }
-        a::after {
-          position: absolute;
-          left: 0;
-          content: '';
-          width: 100%;
-          height: 10px;
-          background-color: gold;
-          bottom: -2px;
-          transform: scale(0, 1);
-          transform-origin: left top;
-          transition: transform 0.3s;
-        }
-        a:hover::after {
-          transform: scale(1, 1);
-        }
-        del {
-          text-decoration-color: rgba(255, 0, 0, 0.8);
-        }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Sora:wght@100..800&family=Zen+Kaku+Gothic+Antique&family=Zen+Kurenaido&display=swap" rel="stylesheet">
 </head>
-<body>
-  <article>
-    <h2 class="zen-kurenaido-regular">Portfolio</h2>
-    <ol class="zen-kurenaido-regular">
-      <li><a class="marker" href="https://okami-821.github.io/portfolio01/" target="_blank">Portfolio 01</a></li>
-      <li><del>Portfolio 02</del></li>
-      <li><a class="marker" href="https://okami-821.github.io/portfolio03/" target="_blank">Portfolio 03</a></li>
-      <li><a class="marker" href="https://okami-821.github.io/portfolio04/" target="_blank">Portfolio 04</a></li>
-      <li><a class="marker" href="https://okami-821.github.io/portfolio05/" target="_blank">Portfolio 05</a></li>
-      <li><a class="marker" href="https://okami-821.github.io/portfolio06/" target="_blank">Portfolio 06</a></li>
-    </ol>
-  </article>
+<body class="portfolio">
+  <header class="portfolio-header">
+    <h1>岡見 美和</h1>
+  </header>
+  <main>
+    <ul class="portfolio-list">
+      <li>
+        <a href="https://okami-821.github.io/portfolio01/" target="_blank">
+          <picture>
+            <source srcset="assets/images/01.webp">
+            <img src="assets/images/01.jpg" width="300">
+          </picture>
+        </a>
+        <div class="portfolio-detail">
+          <h2>SHop Site</h2>
+          <!-- <span>2022/09/01</span> -->
+          <p>香水専門店のショップサイト</p>
+        </div>
+      </li>
+      <li>
+        <a href="https://okami-821.github.io/02_work/" target="_blank">
+          <picture>
+            <source srcset="assets/images/03.webp">
+            <img src="assets/images/02.jpg" width="300">
+          </picture>
+        </a>
+        <div class="portfolio-detail">
+          <div class="portfolio-detail_flex">
+            <h2>SHop Site</h2>
+          <!-- <span>2022/09/01</span> -->
+          </div>
+          <p>婦人服・雑貨のショップサイト</p>
+        </div>
+      </li>
+      <li>
+        <a href="https://okami-821.github.io/03_work/" target="_blank">
+          <picture>
+            <source srcset="assets/images/06.webp">
+            <img src="assets/images/06.jpg" width="300">
+          </picture>
+        </a>
+        <div class="portfolio-detail">
+          <div class="portfolio-detail_flex">
+            <h2>SHop Site</h2>
+          <!-- <span>2022/09/01</span> -->
+          </div>
+          <p>婦人服・雑貨のショップサイト</p>
+        </div>
+      </li>
+      <li>
+        <a href="https://okami-821.github.io/portfolio04/" target="_blank">
+          <picture>
+            <source srcset="assets/images/02.webp">
+            <img src="assets/images/02.jpg" width="300">
+          </picture>
+        </a>
+        <div class="portfolio-detail">
+          <div class="portfolio-detail_flex">
+            <h2>Catalog List</h2>
+          <!-- <span>2022/09/01</span> -->
+          </div>
+          <p>カタログ</p>
+        </div>
+      </li>
+      <li>
+        <a href="https://okami-821.github.io/portfolio03/" target="_blank">
+          <picture>
+            <source srcset="assets/images/08.webp">
+            <img src="assets/images/08.jpg" width="300">
+          </picture>
+        </a>
+        <div class="portfolio-detail">
+          <div class="portfolio-detail_flex">
+            <h2>Feature Page</h2>
+          <!-- <span>2022/09/01</span> -->
+          </div>
+          <p>企業紹介ページ</p>
+        </div>
+      </li>
+      <li>
+        <a href="https://okami-821.github.io/portfolio05/" target="_blank">
+          <picture>
+            <source srcset="assets/images/07.webp">
+            <img src="assets/images/07.jpg" width="300">
+          </picture>
+        </a>
+        <div class="portfolio-detail">
+          <div class="portfolio-detail_flex">
+            <h2>Catalog List</h2>
+          <!-- <span>2022/09/01</span> -->
+          </div>
+          <p>カタログ</p>
+        </div>
+      </li>
+    </ul>
+  </main>
 </body>
 </html>
