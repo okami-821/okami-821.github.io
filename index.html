@@ -3,108 +3,259 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <title>Portforio</title>
-
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Sora:wght@100..800&family=Zen+Kaku+Gothic+Antique&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+  <!-- Animate CSS CDN -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+  <title>Portforio | OKAMI MIWA</title>
+
 </head>
 <body class="portfolio">
+
+  <!-- Navbar -->
   <header class="portfolio-header">
-    <h1>岡見 美和</h1>
+    <nav>
+      <input type="checkbox" class="menu-btn" id="menu-btn">
+      <label for="menu-btn" class="menu-icon">
+        <span class="navicon"></span>
+      </label>
+      <ul class="menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <!-- <li><a href="#skills" class="nav-link">Skills</a></li> -->
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <!-- <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button> -->
+      </ul>
+    </nav>
+    <h1>岡見 美和 | Portfolio</h1>
   </header>
-  <main>
-    <ul class="portfolio-list">
-      <li>
-        <a href="https://okami-821.github.io/portfolio01/" target="_blank">
-          <picture>
-            <source srcset="assets/images/01.webp">
-            <img src="assets/images/01.jpg" width="300">
-          </picture>
-        </a>
-        <div class="portfolio-detail">
-          <h2>SHop Site</h2>
-          <!-- <span>2022/09/01</span> -->
-          <p>香水専門店のショップサイト</p>
-        </div>
-      </li>
-      <li>
-        <a href="https://okami-821.github.io/02_work/" target="_blank">
-          <picture>
-            <source srcset="assets/images/03.webp">
-            <img src="assets/images/02.jpg" width="300">
-          </picture>
-        </a>
-        <div class="portfolio-detail">
-          <div class="portfolio-detail_flex">
-            <h2>SHop Site</h2>
-          <!-- <span>2022/09/01</span> -->
+  <main class="portfolio-main">
+    <section class="hero" id="about">
+      <div class="hero-inner">
+        <img
+        src="assets/images/wfh_1.svg"
+        alt="storysetさんのイラスト タイトル「Code typing concept illustration」"
+        loading="lazy"
+        class="hero-img"
+      >
+      <div class="bio">
+        <h2 class="bio-title">About Me</h2>
+        <p class="bio-text">
+          ポートフォリオをご覧いただきありがとうございます。
+        </p>
+        <p>
+          これまで携わってきた職業を列挙させていただくと、販売職、コールセンター、システムエンジニアと経験し現在WEB制作のお仕事を中心に活動しております。
+          </p>
+          <p>
+          WEBサイトを道具の一環として考えており、誰もが使いやすく操作のしやすい、またストレスを感じさせないウェブパフォーマンスを重視して制作しております。
+        </p>
+      </div>
+      </div>
+    </section>
+    
+    <section class="portfolio-contents" id="projects">
+      <h2>制作物</h2>
+      <ul class="portfolio-list">
+        <li>
+          <a href="https://okami-821.github.io/portfolio01/" target="_blank">
+            <picture>
+              <source srcset="assets/images/01.webp">
+              <img src="assets/images/01.jpg" width="300">
+            </picture>
+          </a>
+          <div class="portfolio-detail">
+            <h3>SHop Site</h3>
+            <p>香水専門店のショップサイト</p>
           </div>
-          <p>婦人服・雑貨のショップサイト</p>
-        </div>
-      </li>
-      <li>
-        <a href="https://okami-821.github.io/03_work/" target="_blank">
-          <picture>
-            <source srcset="assets/images/06.webp">
-            <img src="assets/images/06.jpg" width="300">
-          </picture>
-        </a>
-        <div class="portfolio-detail">
-          <div class="portfolio-detail_flex">
-            <h2>SHop Site</h2>
-          <!-- <span>2022/09/01</span> -->
+        </li>
+        <li>
+          <a href="https://okami-821.github.io/02_work/" target="_blank">
+            <picture>
+              <source srcset="assets/images/03.webp">
+              <img src="assets/images/02.jpg" width="300">
+            </picture>
+          </a>
+          <div class="portfolio-detail">
+            <div class="portfolio-detail_flex">
+              <h3>SHop Site</h3>
+            </div>
+            <p>婦人服・雑貨のショップサイト</p>
           </div>
-          <p>婦人服・雑貨のショップサイト</p>
-        </div>
-      </li>
-      <li>
-        <a href="https://okami-821.github.io/portfolio04/" target="_blank">
-          <picture>
-            <source srcset="assets/images/02.webp">
-            <img src="assets/images/02.jpg" width="300">
-          </picture>
-        </a>
-        <div class="portfolio-detail">
-          <div class="portfolio-detail_flex">
-            <h2>Catalog List</h2>
-          <!-- <span>2022/09/01</span> -->
+        </li>
+        <li>
+          <a href="https://okami-821.github.io/03_work/" target="_blank">
+            <picture>
+              <source srcset="assets/images/06.webp">
+              <img src="assets/images/06.jpg" width="300">
+            </picture>
+          </a>
+          <div class="portfolio-detail">
+            <div class="portfolio-detail_flex">
+              <h3>SHop Site</h3>
+            </div>
+            <p>婦人服・雑貨のショップサイト</p>
           </div>
-          <p>カタログ</p>
-        </div>
-      </li>
-      <li>
-        <a href="https://okami-821.github.io/portfolio03/" target="_blank">
-          <picture>
-            <source srcset="assets/images/08.webp">
-            <img src="assets/images/08.jpg" width="300">
-          </picture>
-        </a>
-        <div class="portfolio-detail">
-          <div class="portfolio-detail_flex">
-            <h2>Feature Page</h2>
-          <!-- <span>2022/09/01</span> -->
+        </li>
+        <li>
+          <a href="https://okami-821.github.io/portfolio04/" target="_blank">
+            <picture>
+              <source srcset="assets/images/02.webp">
+              <img src="assets/images/02.jpg" width="300">
+            </picture>
+          </a>
+          <div class="portfolio-detail">
+            <div class="portfolio-detail_flex">
+              <h3>Catalog List</h3>
+            </div>
+            <p>カタログ</p>
           </div>
-          <p>企業紹介ページ</p>
-        </div>
-      </li>
-      <li>
-        <a href="https://okami-821.github.io/portfolio05/" target="_blank">
-          <picture>
-            <source srcset="assets/images/07.webp">
-            <img src="assets/images/07.jpg" width="300">
-          </picture>
-        </a>
-        <div class="portfolio-detail">
-          <div class="portfolio-detail_flex">
-            <h2>Catalog List</h2>
-          <!-- <span>2022/09/01</span> -->
+        </li>
+        <li>
+          <a href="https://okami-821.github.io/portfolio03/" target="_blank">
+            <picture>
+              <source srcset="assets/images/08.webp">
+              <img src="assets/images/08.jpg" width="300">
+            </picture>
+          </a>
+          <div class="portfolio-detail">
+            <div class="portfolio-detail_flex">
+              <h3>Feature Page</h3>
+            </div>
+            <p>企業紹介ページ</p>
           </div>
-          <p>カタログ</p>
-        </div>
-      </li>
-    </ul>
+        </li>
+        <li>
+          <a href="https://okami-821.github.io/portfolio05/" target="_blank">
+            <picture>
+              <source srcset="assets/images/07.webp">
+              <img src="assets/images/07.jpg" width="300">
+            </picture>
+          </a>
+          <div class="portfolio-detail">
+            <div class="portfolio-detail_flex">
+              <h3>Catalog List</h3>
+            </div>
+            <p>カタログ</p>
+          </div>
+        </li>
+        <li>
+          <a href="https://www.tabinekokagu.com/" target="_blank">
+            <picture>
+              <source srcset="assets/images/09.webp">
+              <img src="assets/images/09.jpg" width="300">
+            </picture>
+          </a>
+          <div class="portfolio-detail">
+            <div class="portfolio-detail_flex">
+              <h3>WEB SITE</h3>
+            </div>
+            <p>家具工房 Tabineko オフィシャルサイト</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    
+    <section class="contact" id="contact">
+      <h2>メッセージフォーム</h2>
+      <div class="contact-form-container">
+        <form action="" method="POST">
+        <!-- <form action="https://formspree.io/f/xjkwrvgk" method="POST"> -->
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input 
+            type="text"
+            id="name"
+            name="sender-name"
+            placeholder=""
+            class="input-field"
+            required
+            >
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+            type="email"
+            id="email"
+            name="sender-email"
+            placeholder="Enter Your Email"
+            class="input-field"
+            required
+            >
+          </div>
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea
+            id="message"
+            cols="60"
+            rows="10"
+            placeholder="Enter Your Message"
+            name="message"
+            class="input-field"
+            required
+            ></textarea>
+          </div>
+          <input
+          type="submit"
+          value="Submit"
+          id="submit-btn"
+          class="submit-btn"
+          >
+        </form>
+      </div>
+    </section>
   </main>
+
+  <i class="scroll-up" id="scroll-up">
+    <img class="up-arrow" width="37" height="37" src="https://img.icons8.com/parakeet-line/48/thick-arrow-pointing-up.png" alt="thick-arrow-pointing-up"/>
+    
+  </i>
+
+  <footer class="footer">
+    <p class="copy">&copy; Copyright 2025</p>
+    <p class="copu">
+      Built with &#10000; by Miwa Okami
+    </p>
+  </footer>
+
+  <script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+<script>
+  'use strict'
+  {
+    const scrollUp = document.querySelector("#scroll-up");
+    scrollUp.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+
+  }
+</script>
+
+
+
 </body>
 </html>
