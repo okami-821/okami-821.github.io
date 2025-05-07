@@ -1,22 +1,51 @@
 @charset "utf-8";
 
-html, body, * {
+:root {
+  --primary-color: #000;
+  --secondary-color: #333;
+  --background-color: white;
+
+  --font-family: "Libre Baskerville", serif;
+  --normal-font: 400;
+  --bold-font: 700;
+
+  --bottom-margin: 0.5rem;
+  --line-height: 1.7em;
+
+  --transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  font-family: "Libre Baskerville", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
-html, body {
-  width: 100vw;
-  height: 100vh;
+body {
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--primary-color);
 }
 
 ul {
   list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
 }
 
 img {
@@ -27,34 +56,166 @@ img {
   vertical-align: bottom;
 }
 
-a {
-  display: inline-block;
-}
-
+/* HEADER */
 .portfolio-header {
-  border-bottom: 1px solid;
+  width: 100%;
+  height: 72px;
+  padding: 10px 0;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--background-color);
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .portfolio-header h1 {
   font-weight: 400;
   padding: 1rem;
+  font-size: clamp(1.25rem, 1.023rem + 1.14vw, 1.875rem);
 }
 
-main {
-  width: min(1200px, 100%);
-  margin: 50px auto 100px;
+.menu {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  margin-block-start: 70px;
+  padding: 0 0 10px 0;
+  background-color: white;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transform: scale(1, 0);
+  transform-origin: top;
+}
+
+/* Hamburger menu Button */
+.menu-btn:checked ~ .menu {
+  transform: scale(1, 1);
+  transform-origin: top;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+/* Hamburger menu Text */
+.menu a {
+  letter-spacing: 2px;
+  font-size: 1em;
+  text-transform:capitalize;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu li {
+  padding: 15px 0;
+  margin: 0 54px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu-btn:checked ~ .menu a,
+.menu-btn:checked ~ .menu li {
+  opacity: 1;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-icon {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 24px 14px;
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+}
+
+.navicon {
+  background-color: var(--primary-color);
+  display: block;
+  width: 26px;
+  height: 3px;
+  position: relative;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon::before,
+.navicon::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--primary-color);
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon::before {
+  top: 9px;
+}
+
+.navicon::after {
+  bottom: 9px;
+}
+
+/* Hamburger menu Animation Start */
+.menu-btn:checked ~ .menu-icon .navicon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon::after {
+  transform: rotate(45deg);
+  bottom: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+
+/* Contents SECTION */
+.portfolio-main {
+  width: min(1200px, 90%);
+  margin-inline: auto;
+  padding-block: 100px;
+}
+
+.portfolio-contents,
+.contact {
+  margin-block: 100px;
+}
+
+.portfolio-contents h2,
+.contact h2 {
+  border-bottom: 1px solid var(--primary-color);
+  margin-block-end: 50px;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
+.contact h2::after {
+  content: "※現在機能停止しています。";
+  font-size: 12px;
+  color: red;
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .contact h2::after {
+    padding: 0 1rem;
+  }
+
 }
 
 .portfolio-list {
-  /* display: flex;
-  align-items: stretch; */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5%;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .portfolio-list li {
-  border: 1px solid;
+  border: 1px solid #999;
   width: 100%;
 }
 
@@ -83,6 +244,186 @@ main {
   padding: 1rem;
 }
 
+.portfolio-detail h3 {
+  color: var(--textColor);
+}
+
 .portfolio-detail p {
   font-family: "MS Pゴシック",sans-serif;
+  color: var(--textColor);
+  padding-block-start: 1em;
+}
+
+@media (min-width: 768px) {
+  .portfolio-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* hero SECTION */
+.hero {
+  width: min(1000px, 100%);
+  margin: 100px auto;
+}
+.hero-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.hero img {
+  height: auto;
+  width: 100%;
+}
+.bio {
+  width: 100%;
+  /* width: 25rem; */
+  height: 333px;
+  /* padding: 0.625rem; */
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #999;
+  /* box-shadow: 0px 2px 15px 2px var(--primary-color); */
+
+  overflow: auto;
+  position: relative;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #92E3A9 transparent;
+}
+.bio h2 {
+  margin-bottom: var(--bottom-margin);
+}
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+.scroller {
+  animation: mask-up;
+  animation-timeline: view();
+  animation-range: 0 1rem;
+  mask-composite: exclude;
+
+}
+@keyframes mask-up {
+  to {
+    mask-size: 100% 120px, 100% 100%;
+  }
+}
+@media (min-width: 768px) {
+  .hero img {
+    width: 50%;
+    /* height: 37.5rem;
+    width: 37.5rem; */
+  }
+  .bio {
+    width: 40%;
+  }
+}
+
+/* contact SECTION */
+.contact {
+  margin-block-start: 2rem;
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: auto;
+  padding: 0.938rem;
+  border: 1px solid;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: var(--bottom-margin);
+}
+
+.contact-form-container label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 1rem;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  /* padding-block-start: 10px;
+  padding-block-end: 10px; */
+  border-radius: 5px;
+  border: 0;
+  border: 2px outset var(--primary-color);
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-field::placeholder {
+  /* padding: 0.5rem; */
+  color: #999;
+}
+input,textarea {
+  font-family: "MS Pゴシック",sans-serif;
+}
+
+input,
+textarea {
+  border:3px solid #000;
+  padding:10px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #FFF;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+.submit-btn:hover {
+  color: #FFF;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+/* input:-internal-autofill-selected {
+  background-color: light-dark(rgb(146, 227, 169), rgba(70, 90, 126, 0.4)) !important;
+} */
+
+
+
+/* footer  */
+.footer {
+  background-color: var(--background-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.scroll-up {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+
+  position: fixed;
+  right: 2%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.scroll-up .up-arrow{
+  width: 50px;
+  height: 50px;
+  padding: 0.6rem;
 }
