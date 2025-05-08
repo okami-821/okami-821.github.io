@@ -9,68 +9,55 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Sora:wght@100..800&family=Zen+Kaku+Gothic+Antique&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
-
   <!-- Animate CSS CDN -->
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 />
-
   <title>Portforio | OKAMI MIWA</title>
-
 </head>
-<body class="portfolio">
+<body>
 
   <!-- Navbar -->
-  <header class="portfolio-header">
+  <header class="header">
     <nav>
-      <input type="checkbox" class="menu-btn" id="menu-btn">
+      <input type="checkbox" id="menu-btn" class="menu-btn">
       <label for="menu-btn" class="menu-icon">
-        <span class="navicon"></span>
+        <span class="menu-navicon"></span>
       </label>
       <ul class="menu">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <!-- <li><a href="#skills" class="nav-link">Skills</a></li> -->
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-        <!-- <button class="burger-menu" id="burger-menu">
-          <ion-icon class="bars" name="menu-outline"></ion-icon>
-        </button> -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <h1>匿名 匿名 | Portfolio</h1>
+    <h1>anonymous | Portfolio</h1>
   </header>
-  <main class="portfolio-main">
-    <section class="hero" id="about">
-      <div class="hero-inner">
+
+  <main class="main">
+    <section id="about" class="about">
+      <div class="about__inner">
         <img
         src="assets/images/wfh_1.svg"
         alt="storysetさんのイラスト タイトル「Code typing concept illustration」"
         loading="lazy"
-        class="hero-img"
-      >
-      <div class="bio">
-        <h2 class="bio-title">About Me</h2>
-        <p class="bio-text">
-          ポートフォリオをご覧いただきありがとうございます。
-        </p>
-        <p>
-          これまで携わってきた職業を列挙させていただくと、販売職、コールセンター、システムエンジニアと経験し現在WEB制作のお仕事を中心に活動しております。
-          </p>
-          <p>
-          WEBサイトを道具の一環として考えており、誰もが使いやすく操作のしやすい、またストレスを感じさせないウェブパフォーマンスを重視して制作しております。
-        </p>
-      </div>
+        class="about__img"
+        >
+        <div class="about__bio scroller">
+          <h2 class="about__title">About Me</h2>
+          <p class="about__text">ポートフォリオをご覧いただきありがとうございます。</p>
+          <p>これまで携わってきた職業を列挙させていただくと、販売職、コールセンター、システムエンジニアと経験し現在WEB制作のお仕事を中心に活動しております。</p>
+          <p>WEBサイトを道具の一環として考えており、誰もが使いやすく操作のしやすい、またストレスを感じさせないウェブパフォーマンスを重視して制作しております。</p>
+        </div>
       </div>
     </section>
     
-    <section class="portfolio-contents" id="projects">
-      <h2>制作物</h2>
-      <ul class="portfolio-list">
+    <section id="projects" class="portfolio margin--block">
+      <h2 class="ttl">production</h2>
+      <ul class="portfolio__list">
         <li>
           <a href="https://okami-821.github.io/portfolio01/" target="_blank">
             <picture>
@@ -78,7 +65,7 @@
               <img src="assets/images/01.jpg" width="300">
             </picture>
           </a>
-          <div class="portfolio-detail">
+          <div class="portfolio__detail">
             <h3>SHop Site</h3>
             <p>香水専門店のショップサイト</p>
           </div>
@@ -90,10 +77,8 @@
               <img src="assets/images/02.jpg" width="300">
             </picture>
           </a>
-          <div class="portfolio-detail">
-            <div class="portfolio-detail_flex">
-              <h3>SHop Site</h3>
-            </div>
+          <div class="portfolio__detail">
+            <h3>SHop Site</h3>
             <p>婦人服・雑貨のショップサイト</p>
           </div>
         </li>
@@ -104,10 +89,8 @@
               <img src="assets/images/06.jpg" width="300">
             </picture>
           </a>
-          <div class="portfolio-detail">
-            <div class="portfolio-detail_flex">
-              <h3>SHop Site</h3>
-            </div>
+          <div class="portfolio__detail">
+            <h3>SHop Site</h3>
             <p>婦人服・雑貨のショップサイト</p>
           </div>
         </li>
@@ -118,10 +101,8 @@
               <img src="assets/images/02.jpg" width="300">
             </picture>
           </a>
-          <div class="portfolio-detail">
-            <div class="portfolio-detail_flex">
-              <h3>Catalog List</h3>
-            </div>
+          <div class="portfolio__detail">
+            <h3>Catalog List</h3>
             <p>カタログ</p>
           </div>
         </li>
@@ -132,10 +113,8 @@
               <img src="assets/images/08.jpg" width="300">
             </picture>
           </a>
-          <div class="portfolio-detail">
-            <div class="portfolio-detail_flex">
-              <h3>Feature Page</h3>
-            </div>
+          <div class="portfolio__detail">
+            <h3>Feature Page</h3>
             <p>企業紹介ページ</p>
           </div>
         </li>
@@ -146,10 +125,8 @@
               <img src="assets/images/07.jpg" width="300">
             </picture>
           </a>
-          <div class="portfolio-detail">
-            <div class="portfolio-detail_flex">
-              <h3>Catalog List</h3>
-            </div>
+          <div class="portfolio__detail">
+            <h3>Catalog List</h3>
             <p>カタログ</p>
           </div>
         </li>
@@ -160,29 +137,28 @@
               <img src="assets/images/09.jpg" width="300">
             </picture>
           </a>
-          <div class="portfolio-detail">
-            <div class="portfolio-detail_flex">
-              <h3>WEB SITE</h3>
-            </div>
+          <div class="portfolio__detail">
+            <h3>WEB SITE</h3>
             <p>家具工房 Tabineko オフィシャルサイト</p>
           </div>
         </li>
       </ul>
     </section>
     
-    <section class="contact" id="contact">
-      <h2>メッセージフォーム</h2>
-      <div class="contact-form-container">
+    <section id="contact" class="contact margin--block" >
+      <h2 class="ttl">
+        message form</h2>
+      <div class="contact__container">
         <form action="" method="POST">
         <!-- <form action="https://formspree.io/f/xjkwrvgk" method="POST"> -->
-          <div class="form-control">
+          <div class="contact__form">
             <label for="name">Name</label>
             <input 
             type="text"
             id="name"
             name="sender-name"
             placeholder=""
-            class="input-field"
+            class="contact__field"
             required
             >
           </div>
@@ -193,7 +169,7 @@
             id="email"
             name="sender-email"
             placeholder="Enter Your Email"
-            class="input-field"
+            class="contact__field"
             required
             >
           </div>
@@ -205,7 +181,7 @@
             rows="10"
             placeholder="Enter Your Message"
             name="message"
-            class="input-field"
+            class="contact__field"
             required
             ></textarea>
           </div>
@@ -228,7 +204,7 @@
   <footer class="footer">
     <p class="copy">&copy; Copyright 2025</p>
     <p class="copu">
-      Built with &#10000; by tokumei
+      Built with &#10000; by anonymous
     </p>
   </footer>
 
