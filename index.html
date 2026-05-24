@@ -1,237 +1,167 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS Styles -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS Styles -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Sora:wght@100..800&family=Zen+Kaku+Gothic+Antique&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
-  <!-- Animate CSS CDN -->
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
-  <title>Portforio | OKAMI MIWA</title>
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Sora:wght@100..800&family=Zen+Kaku+Gothic+Antique&family=Zen+Kurenaido&display=swap"
+    rel="stylesheet">
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+	<!-- Animate CSS CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<title>PORTFORIO</title>
 </head>
+
 <body>
+	<section class="et-hero-tabs">
+		<h1 class="header-01">PORTFORIO</h1>
+		<!-- <h3 class="header-03">Sliding content with sticky tab nav</h3> -->
+		<nav class="et-hero-tabs-container">
+			<a class="et-hero-tab" href="#tab-01">SHOP SITE - 01</a>
+			<a class="et-hero-tab" href="#tab-02">FEATURE PAGE - 01</a>
+			<a class="et-hero-tab" href="#tab-03">FEATURE PAGE - 02</a>
+			<a class="et-hero-tab" href="#tab-04">SHOP SITE - 02</a>
+			<!-- <a class="et-hero-tab" href="#tab-05">FEATURE PAGE</a> -->
+			<span class="et-hero-tab-slider"></span>
+		</nav>
+	</section>
+	<main class="et-main">
+		<section class="et-slide" id="tab-01">
+			<h2>SHOP SITE - 01</h2>
+			<!-- <h3>2019年制作</h3> -->
+			<a href="https://okami-821.github.io/02_work/" target="_blank" class="et-anchor btn">
+				<picture>
+					<source srcset="assets/images/03.webp">
+					<img src="assets/images/02.jpg" width="300">
+				</picture>
+			</a>
+		</section>
+		<secttion class="et-slide" id="tab-02">
+			<h2>FEATURE PAGE - 01</h2>
+			<!-- <h3>2019年制作</h3> -->
+			<a href="" target="_blank" class="et-anchor btn">
+				<picture>
+					<source srcset="assets/images/02.webp">
+					<img src="assets/images/02.jpg" width="300">
+				</picture>
+			</a>
+		</secttion>
+		<secttion class="et-slide" id="tab-03">
+			<h2>FEATURE PAGE - 02</h2>
+			<!-- <h3>2019年制作</h3> -->
+			<a href="https://okami-821.github.io/portfolio05/" target="_blank" class="et-anchor btn">
+				<picture>
+					<source srcset="assets/images/07.webp">
+					<img src="assets/images/07.jpg" width="300">
+				</picture>
+			</a>
+		</secttion>
+		<secttion class="et-slide" id="tab-04">
+			<h2>SHOP SITE - 02</h2>
+			<!-- <h3></h3> -->
+			<a href="https://okami-821.github.io/03_work/" target="_blank" class="et-anchor btn">
+				<picture>
+					<source srcset="assets/images/06.webp">
+					<img src="assets/images/06.jpg" width="300">
+				</picture>
+			</a>
+		</secttion>
+		<!-- <secttion class="et-slide" id="tab-05">
+			<h2>FEATURE PAGE</h2>
+			<h3>something about FEATURE PAGE</h3>
+		</secttion> -->
+	</main>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" integrity=""></script> -->
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+		crossorigin="anonymous"></script>
+	<script>
+		'use strict'; {
+			class StickyNavigation {
 
-  <!-- Navbar -->
-  <header class="header">
-    <nav>
-      <input type="checkbox" id="menu-btn" class="menu-btn">
-      <label for="menu-btn" class="menu-icon">
-        <span class="menu-navicon"></span>
-      </label>
-      <ul class="menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <h1>anonymous | Portfolio</h1>
-  </header>
+				constructor() {
+					this.currentId = null;
+					this.currentTab = null;
+					this.tabContainerHeight = 70;
+					let self = this;
+					$('.et-hero-tab').click(function () {
+						self.onTabClick(event, $(this));
+					});
+					$(window).scroll(() => { this.onScroll(); });
+					$(window).resize(() => { this.onResize(); });
+				}
 
-  <main class="main">
-    <section id="about" class="about">
-      <div class="about__inner">
-        <img
-        src="assets/images/wfh_1.svg"
-        alt="storysetさんのイラスト タイトル「Code typing concept illustration」"
-        loading="lazy"
-        class="about__img"
-        >
-        <div class="about__bio scroller">
-          <h2 class="about__title">About Me</h2>
-          <p class="about__text">ポートフォリオをご覧いただきありがとうございます。</p>
-          <p>これまで携わってきた職業を列挙させていただくと、販売職、コールセンター、システムエンジニアと経験し現在WEB制作のお仕事を中心に活動しております。</p>
-          <p>WEBサイトを道具の一環として考えており、誰もが使いやすく操作のしやすい、またストレスを感じさせないウェブパフォーマンスを重視して制作しております。</p>
-        </div>
-      </div>
-    </section>
-    
-    <section id="projects" class="portfolio margin--block">
-      <h2 class="ttl">production</h2>
-      <ul class="portfolio__list">
-        <li>
-          <a href="https://okami-821.github.io/portfolio01/" target="_blank">
-            <picture>
-              <source srcset="assets/images/01.webp">
-              <img src="assets/images/01.jpg" width="300">
-            </picture>
-          </a>
-          <div class="portfolio__detail">
-            <h3>SHop Site</h3>
-            <p>香水専門店のショップサイト</p>
-          </div>
-        </li>
-        <li>
-          <a href="https://okami-821.github.io/02_work/" target="_blank">
-            <picture>
-              <source srcset="assets/images/03.webp">
-              <img src="assets/images/02.jpg" width="300">
-            </picture>
-          </a>
-          <div class="portfolio__detail">
-            <h3>SHop Site</h3>
-            <p>婦人服・雑貨のショップサイト</p>
-          </div>
-        </li>
-        <li>
-          <a href="https://okami-821.github.io/03_work/" target="_blank">
-            <picture>
-              <source srcset="assets/images/06.webp">
-              <img src="assets/images/06.jpg" width="300">
-            </picture>
-          </a>
-          <div class="portfolio__detail">
-            <h3>SHop Site</h3>
-            <p>婦人服・雑貨のショップサイト</p>
-          </div>
-        </li>
-        <li>
-          <a href="https://okami-821.github.io/portfolio04/" target="_blank">
-            <picture>
-              <source srcset="assets/images/02.webp">
-              <img src="assets/images/02.jpg" width="300">
-            </picture>
-          </a>
-          <div class="portfolio__detail">
-            <h3>Catalog List</h3>
-            <p>カタログ</p>
-          </div>
-        </li>
-        <li>
-          <a href="https://okami-821.github.io/portfolio03/" target="_blank">
-            <picture>
-              <source srcset="assets/images/08.webp">
-              <img src="assets/images/08.jpg" width="300">
-            </picture>
-          </a>
-          <div class="portfolio__detail">
-            <h3>Feature Page</h3>
-            <p>企業紹介ページ</p>
-          </div>
-        </li>
-        <li>
-          <a href="https://okami-821.github.io/portfolio05/" target="_blank">
-            <picture>
-              <source srcset="assets/images/07.webp">
-              <img src="assets/images/07.jpg" width="300">
-            </picture>
-          </a>
-          <div class="portfolio__detail">
-            <h3>Catalog List</h3>
-            <p>カタログ</p>
-          </div>
-        </li>
-        <li>
-          <a href="https://www.tabinekokagu.com/" target="_blank">
-            <picture>
-              <source srcset="assets/images/09.webp">
-              <img src="assets/images/09.jpg" width="300">
-            </picture>
-          </a>
-          <div class="portfolio__detail">
-            <h3>WEB SITE</h3>
-            <p>家具工房 Tabineko オフィシャルサイト</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-    
-    <section id="contact" class="contact margin--block" >
-      <h2 class="ttl">
-        message form</h2>
-      <div class="contact__container">
-        <form action="" method="POST">
-        <!-- <form action="https://formspree.io/f/xjkwrvgk" method="POST"> -->
-          <div class="contact__form">
-            <label for="name">Name</label>
-            <input 
-            type="text"
-            id="name"
-            name="sender-name"
-            placeholder=""
-            class="contact__field"
-            required
-            >
-          </div>
-          <div class="form-control">
-            <label for="email">Email</label>
-            <input
-            type="email"
-            id="email"
-            name="sender-email"
-            placeholder="Enter Your Email"
-            class="contact__field"
-            required
-            >
-          </div>
-          <div class="form-control">
-            <label for="message">Message</label>
-            <textarea
-            id="message"
-            cols="60"
-            rows="10"
-            placeholder="Enter Your Message"
-            name="message"
-            class="contact__field"
-            required
-            ></textarea>
-          </div>
-          <input
-          type="submit"
-          value="Submit"
-          id="submit-btn"
-          class="submit-btn"
-          >
-        </form>
-      </div>
-    </section>
-  </main>
+				onTabClick(event, element) {
+					event.preventDefault();
+					let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+					$('html, body').animate({ scrollTop: scrollTop }, 600);
+				}
 
-  <i class="scroll-up" id="scroll-up">
-    <img class="up-arrow" width="37" height="37" src="https://img.icons8.com/parakeet-line/48/thick-arrow-pointing-up.png" alt="thick-arrow-pointing-up"/>
-    
-  </i>
+				onScroll() {
+					this.checkTabContainerPosition();
+					this.findCurrentTabSelector();
+				}
 
-  <footer class="footer">
-    <p class="copy">&copy; Copyright 2025</p>
-    <p class="copu">
-      Built with &#10000; by anonymous
-    </p>
-  </footer>
+				onResize() {
+					if (this.currentId) {
+						this.setSliderCss();
+					}
+				}
 
-  <script
-  type="module"
-  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-></script>
-<script
-  nomodule
-  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-></script>
-<script>
-  'use strict'
-  {
-    const scrollUp = document.querySelector("#scroll-up");
-    scrollUp.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
-    });
+				checkTabContainerPosition() {
+					let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+					if ($(window).scrollTop() > offset) {
+						$('.et-hero-tabs-container').addClass('top');
+					}
+					else {
+						$('.et-hero-tabs-container').removeClass('top');
+					}
+				}
 
-  }
-</script>
+				findCurrentTabSelector(element) {
+					let newCurrentId;
+					let newCurrentTab;
+					let self = this;
+					$('.et-hero-tab').each(function () {
+						let id = $(this).attr('href');
+						let offsetTop = $(id).offset().top - self.tabContainerHeight;
+						let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+						if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+							newCurrentId = id;
+							newCurrentTab = $(this);
+						}
+					});
+					if (this.currentId != newCurrentId || this.currentId === null) {
+						this.currentId = newCurrentId;
+						this.currentTab = newCurrentTab;
+						this.setSliderCss();
+					}
+				}
 
+				setSliderCss() {
+					let width = 0;
+					let left = 0;
+					if (this.currentTab) {
+						width = this.currentTab.css('width');
+						left = this.currentTab.offset().left;
+					}
+					$('.et-hero-tab-slider').css('width', width);
+					$('.et-hero-tab-slider').css('left', left);
+				}
 
+			}
 
+			new StickyNavigation();
+		}
+	</script>
 </body>
+
 </html>
