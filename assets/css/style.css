@@ -74,7 +74,7 @@ img {
   height: 100vh;
   position: relative;
   background-color: var(--main-color);
-  text-align: center;
+  /* text-align: center; */
   padding: 0 2em;
 
   & .header-01 {
@@ -83,10 +83,66 @@ img {
     letter-spacing: 0.4rem;
   }
 
+  & .header-02 {
+    width: 100%;
+    font-size: clamp(1.25rem, 1.102rem + 0.74vw, 1.75rem);
+    text-align: start;
+    margin-bottom: 1rem;
+  }
+
   & .header-03 {
     font-size: clamp(0.8rem, 0.4rem + 0.8vw, 1rem);
     letter-spacing: 0.3rem;
   }
+
+  .et-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    padding: 1rem;
+    background-color: #FFF;
+    height: 70%;
+
+    .saite-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      dl {
+        dt {
+          text-align: start;
+          font-weight: 600;
+          font-size: clamp(1rem, 0.963rem + 0.19vw, 1.125rem);
+          margin-bottom: 0.50rem;
+        }
+
+        dd {
+          text-align: start;
+          margin-bottom: 0.20rem;
+
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (width <=768px) {
+  .et-hero-tabs,
+  .et-slide {
+        padding: 0 0rem 1rem 0rem;
+    .et-wrap {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+  }
+}
+
+.et-slide {
+  padding: 0 5rem 1rem 5rem;
 }
 
 .et-hero-tabs-container {
@@ -138,24 +194,29 @@ h3 {
 
 .et-anchor {
   display: inline-block;
-  width: min(100vw, 1000px);
+  /* width: min(100vw, 1000px); */
   border: 0;
   padding: 0.1em;
   background: none;
-  margin: 2rem;
+  /* margin: 2rem; */
 }
 
-.btn {
+/* .btn {
   container-type: inline-size;
-}
+} */
+
 
 @container(width <=320px) {
   .picture {
-    display: block;
     width: 80vh;
   }
 
   img {
     width: 100%;
   }
+}
+
+figcaption {
+  display: flex;
+  gap: 10px;
 }
