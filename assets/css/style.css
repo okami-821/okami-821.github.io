@@ -99,7 +99,7 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2%;
-    padding: 1rem;
+    padding: 2rem;
     background-color: #FFF;
     height: 70%;
 
