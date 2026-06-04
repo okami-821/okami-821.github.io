@@ -63,6 +63,7 @@ img {
   height: auto;
   object-fit: cover;
   vertical-align: bottom;
+  border: 1px solid #eee;
 }
 
 .et-hero-tabs,
@@ -171,6 +172,7 @@ img {
               font-weight: 600;
               font-size: clamp(1rem, 0.963rem + 0.19vw, 1.125rem);
               margin-bottom: 0.50rem;
+              border-bottom: 1px solid;
             }
 
             dd {
@@ -218,6 +220,7 @@ figcaption {
   font-size: clamp(0.75rem, 0.713rem + 0.19vw, 0.875rem);
   display: flex;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .material-symbols-outlined {
