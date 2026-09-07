@@ -1,196 +1,161 @@
-$color-text: #FFF; // main text color
-$color-tip-ui: #A259FF; // ui image color
-$color-tip-co: #007ACC; // vsCode image color
-$color-tip-gd: deeppink; // graphic design image color
-
-
-
-@mixin spec-detail-inline {
-	border: 1px solid;
-	display: inline-block;
-	border-radius: 5px;
-	padding: 0px 10px;
-}
-
+@charset "UTF-8";
 .project-card {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 3rem;
-
-	&__title {
-		color: $color-text;
-	}
-
-	&__spec-list {
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
-	}
-
-	&__spec-group {
-		display: flex;
-		gap: 16px;
-		align-items: center;
-	}
-
-	&__spec-name {
-		width: 100px;
-		color: $color-text;
-	}
-
-	&__spec-detail {
-		width: 100%;
-		display: flex;
-		gap: 8px;
-		color: $color-text;
-
-		& .inline {
-			@include spec-detail-inline;
-		}
-
-		& .tip-gd {
-			background-color: $color-tip-gd
-		}
-
-		& .tip-ui {
-			background-color: $color-tip-ui
-		}
-
-		& .tip-co {
-			background-color: $color-tip-co;
-		}
-	}
-
-	&__link-wrap {
-		display: flex;
-		flex-direction: row;
-		gap: 2rem;
-	}
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
 }
-
+.project-card__title {
+  color: #FFF;
+}
+.project-card__spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-card__spec-group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.project-card__spec-name {
+  width: 100px;
+  color: #FFF;
+}
+.project-card__spec-detail {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  color: #FFF;
+}
+.project-card__spec-detail .inline {
+  border: 1px solid;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+.project-card__spec-detail .tip-gd {
+  background-color: deeppink;
+}
+.project-card__spec-detail .tip-ui {
+  background-color: #A259FF;
+}
+.project-card__spec-detail .tip-co {
+  background-color: #007ACC;
+}
+.project-card__link-wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
 
 .project-card__link-button {
-	color: white;
-	width: 200px;
-	padding: 1rem;
-	text-align: center;
-	position: relative;
-	padding: 15px 30px;
-	font-size: 16px;
-	font-weight: 600;
-	color: white;
-	background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
-	background-size: 400% 400%;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  color: white;
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 400% 400%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .project-card__link-button:hover {
-	background-position: 100% 100%;
-	transform: translateY(-2px);
-	box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-	animation: gradientRotate 200s ease infinite;
-	color: $color-text;
+  background-position: 100% 100%;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  animation: gradientRotate 200s ease infinite;
+  color: #FFF;
 }
 
 @keyframes gradientRotate {
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
 /* overlay */
 :root:has(dialog[open]) {
-	overflow: hidden;
-	scrollbar-gutter: stable;
+  overflow: hidden;
+  scrollbar-gutter: stable;
 }
 
 .dialog-position {
-	margin: auto;
-	width: 800px;
-	border-radius: 15px;
+  margin: auto;
+  width: 800px;
+  border-radius: 15px;
 }
 
 .dialog-position::backdrop {
-	background-color: rgba(15, 23, 42, 0.6);
-	backdrop-filter: blur(4px);
-	/* トレンドの背景ぼかし */
-
-	transition:
-		opacity 0.4s ease,
-		display 0.4s allow-discrete;
-	opacity: 0;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  /* トレンドの背景ぼかし */
+  transition: opacity 0.4s ease, display 0.4s allow-discrete;
+  opacity: 0;
 }
 
 .dialog-position[open]::backdrop {
-	opacity: 1;
+  opacity: 1;
 }
 
 @starting-style {
-	.dialog-position[open]::backdrop {
-		opacity: 0;
-		transform: translateY(40px);
-	}
+  .dialog-position[open]::backdrop {
+    opacity: 0;
+    transform: translateY(40px);
+  }
 }
-
 .dialog-style {
-	width: 100%;
-	height: auto;
-	padding: 2rem;
-	display: flex;
-	flex-direction: column;
-	gap: 33px;
-
-	& dt {
-		color: black;
-		font-size: clamp(1.125rem, 0.903rem + 1.11vw, 1.875rem);
-		font-weight: 600;
-		border-bottom: 1px solid;
-		padding: 0.6rem 1rem;
-		max-width: 400px;
-		margin-bottom: 1rem;
-	}
-
-	& dd {
-		color: black;
-		font-size: clamp(0.875rem, 0.838rem + 0.19vw, 1rem);
-	}
-
-	& dd:last-child {
-		margin-top: 1rem;
-	}
-
-	& button {
-		position: absolute;
-		top: 18px;
-		right: 18px;
-		font-size: 3rem;
-		border: 0;
-		background-color: transparent;
-
-		font-family: monospace;
-		cursor: pointer;
-	}
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+.dialog-style dt {
+  font-size: clamp(1.125rem, 0.903rem + 1.11vw, 1.875rem);
+  font-weight: 600;
+  border-bottom: 1px solid;
+  padding: 0.6rem 1rem;
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+.dialog-style dd {
+  font-size: clamp(0.875rem, 0.838rem + 0.19vw, 1rem);
+}
+.dialog-style dd:last-child {
+  margin-top: 1rem;
+}
+.dialog-style button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 3rem;
+  border: 0;
+  background-color: transparent;
+  font-family: monospace;
+  cursor: pointer;
 }
 
 dialog:-internal-dialog-in-top-layer::backdrop {
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.8);
-	inset: 0px;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  inset: 0px;
 }
 
 .modal-video {
-	width: clamp(200px, 40vw, 300px);
-}
+  width: clamp(200px, 40vw, 300px);
+}/*# sourceMappingURL=common.css.map */
