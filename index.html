@@ -18,7 +18,10 @@
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=open_in_new" />
 	<!-- CSS Styles -->
 	<link rel="stylesheet" href="./assets/css/style.css" />
-	<link rel="stylesheet" href="./assets/css/common.css" />
+	<!-- <link rel="stylesheet" href="./assets/css/common.css" /> -->
+	<link rel="stylesheet" href="common.css" />
+
+
 
 </head>
 
@@ -28,7 +31,7 @@
 	</header>
 
 
-	<main>
+	<main class="main">
 		<div class="list">
 			<picture>
 				<source srcset="assets/images/01.webp" type="image/webp">
@@ -109,10 +112,27 @@
 							<line x1="10" y1="14" x2="21" y2="3"></line>
 						</svg>
 					</a>
-					<a href="https://www.figma.com/proto/ihdS1SWRQDTLmGgLR0Yovc/resson?node-id=655-2334&viewport=1013%2C305%2C0.78&t=AObaROZlf9zZmUkj-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=655%3A2334&show-proto-sidebar=1&page-id=206%3A26"
-						aria-label="作品詳細をプレビューで開く" target="_blank" rel="noopener noreferrer" class="project-card__link-button" style="pointer-events: none;">
+					<button class="project-card__link-button ovarlay-button" id="showDialog">
 						<span>プレビュー</span>
-					</a>
+					</button>
+					<dialog class="dialog-position" id="modal">
+						<div class="dialog-style">
+							<dl>
+								<dt>詳細</dt>
+								<dd>⚫︎目的：建設業界の安全管理や工事の進捗確認などの日報</dd>
+								<dd>⚫︎利用者：協力会社職長から元請け企業へ提出</dd>
+								<dd>⚫︎色について:メインカラーには信頼や誠実さを表す青色を採用しました。青色はリラックス効果も併せ持つため、現場仕事に携わるユーザーが画面を見て操作する際のストレスを緩和する狙いがあります。</dd>
+								<dd><img src="assets/images/color.png" alt=""></dd>
+							</dl>
+							<dl>
+								<dt>画面設計</dt>
+								<dd>画面は協力会社の職長が日々の日報を記入する流れになります。見出し、決定ボタンなどは文字をすやや大きく見せており、んボタンも操作しやすいように大きめに設定しました。細かな設定など排除し、シンプルな作りを心がけました。</dd>
+								<dd><video src="assets/aaa.mp4" autoplay muted loop playsinline controls class="modal-video"></video></dd>
+							</dl>
+							<span>※以降は随時追加更新いたします</span>
+							<button id="closeDialog">× </button>
+						</div>
+					</dialog>
 				</div>
 			</div>
 		</div>
@@ -231,8 +251,8 @@
 						<dd class="project-card__spec-detail">オーダー家具に興味がある20代以降の層</dd>
 					</div>
 				</dl>
-				<a href="https://www.tabinekokagu.com/" aria-label="作品詳細を新しいウィンドウで開く" target="_blank"
-					rel="noopener noreferrer" class="project-card__link-button">
+				<a href="https://www.tabinekokagu.com/" aria-label="作品詳細を新しいウィンドウで開く" target="_blank" rel="noopener noreferrer"
+					class="project-card__link-button">
 					<span>Webサイトへ</span>
 					<svg class="project-card__link-icon" xmlns="http://w3.org" viewBox="0 0 24 24" width="16" height="16"
 						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -246,7 +266,7 @@
 		</div>
 
 
-				<div class="list">
+		<div class="list">
 			<picture>
 				<source srcset="assets/images/02.webp" type="image/webp">
 				<img src="assets/images/02.jpg" alt="">
@@ -275,8 +295,8 @@
 						<dd class="project-card__spec-detail">オーダー家具に興味がある20代以降の層</dd>
 					</div>
 				</dl>
-				<a href="https://okami-821.github.io/02/" aria-label="作品詳細を新しいウィンドウで開く" target="_blank"
-					rel="noopener noreferrer" class="project-card__link-button">
+				<a href="" aria-label="作品詳細を新しいウィンドウで開く" target="_blank" rel="noopener noreferrer"
+					class="project-card__link-button">
 					<span>Webサイトへ</span>
 					<svg class="project-card__link-icon" xmlns="http://w3.org" viewBox="0 0 24 24" width="16" height="16"
 						fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -290,6 +310,35 @@
 		</div>
 
 		<footer></footer>
+
+		<script>
+			const dialog = document.querySelector("dialog");
+
+			const showButton = document.querySelector("#showDialog");
+			showButton.addEventListener("click", () => {
+				dialog.showModal();
+			});
+
+			const closeButton = document.querySelector("#closeDialog");
+			closeButton.addEventListener("click", () => {
+				dialog.close();
+			});
+
+			const modal = document.getElementById('modal');
+			modal.addEventListener('click', (e) => {
+				const rect = modal.getBoundingClientRect();
+
+				if (
+					e.clientX < rect.left ||
+					e.clientX > rect.right ||
+					e.clientY < rect.top ||
+					e.clientY > rect.bottom
+				) {
+					// 外側であればモーダルを閉じる
+					modal.close();
+				}
+			});
+		</script>
 
 
 
